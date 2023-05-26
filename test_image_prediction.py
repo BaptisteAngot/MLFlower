@@ -25,7 +25,7 @@ def predict_image(image):
 
 # Obtenir le nom de la classe à partir de l'ID
 def get_class_name(class_id):
-    with open('../label.csv', 'r') as file:
+    with open('label.csv', 'r') as file:
         reader = csv.reader(file)
         next(reader)  # Ignorer la première ligne (entête)
         for row in reader:
@@ -35,7 +35,7 @@ def get_class_name(class_id):
 
 class ImagePredictionTest(unittest.TestCase):
     def test_image_prediction(self):
-        image_path = "assets/img/romulearosea.jpg"
+        image_path = "test/assets/img/romulearosea.jpg"
         expected_class = "Romulea rosea"
 
         image = Image.open(image_path)
