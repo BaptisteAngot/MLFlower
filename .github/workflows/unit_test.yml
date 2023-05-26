@@ -1,0 +1,25 @@
+name: Test unitaire
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code source
+        uses: actions/checkout@v2
+
+      - name: Configuration de Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Installation des dépendances
+        run: pip install -r requirements.txt
+
+      - name: Exécution du test unitaire
+        run: python -m unittest /test/test_image_prediction.py
