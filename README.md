@@ -38,6 +38,24 @@ Exemple de réponse JSON :
   "probability": 0.987
 }
 ```
+
+## Tests unitaires
+Le projet comprend des tests unitaires pour vérifier la précision des prédictions d'images. Les tests unitaires sont écrits en utilisant le module unittest de Python. Vous pouvez exécuter les tests unitaires en suivant les étapes ci-dessous :
+
+1. Assurez-vous que vous avez installé les dépendances requises en exécutant la commande suivante :
+```bash
+pip install -r requirements.txt
+```
+2. Accédez au répertoire du projet s'il n'est pas déjà sélectionné :
+```bash
+cd MLFlower
+```
+3. Exécutez le fichier de test test_image_prediction.py en utilisant la commande suivante :
+```bash
+python test_image_prediction.py
+```
+4. Les tests unitaires seront exécutés et vous verrez les résultats affichés dans la console. Les tests vérifient si la classe prédite pour une image donnée correspond à la classe attendue.
+
 ## Remarque
 Assurez-vous d'avoir des images de plantes dans un format pris en charge (par exemple, JPEG, PNG) pour obtenir des prédictions précises. Vérifiez également que les images sont suffisamment claires et qu'elles contiennent principalement des plantes pour de meilleurs résultats de classification.
 
